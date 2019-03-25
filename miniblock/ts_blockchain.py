@@ -1,9 +1,16 @@
+import hashlib
+import json
+from time import time
+
 class Blockchain(object):
     def _init_(self):
         self.chain = []
         self.current_transactions = []
 
-    def new_block(self):
+        # genesis block 생성
+        self.new_block(previous_hash=1, proof=100)
+
+    def new_block(self, proof, previous_hash=None):
         # create new block, add it to chain
         """
           블록체인에 새로운 블록 만들기
@@ -28,9 +35,24 @@ class Blockchain(object):
         self.chain.append(block)
         return block
 
-    def new_transaction(self):
+    def new_transaction(self, sender, recipient, amount):
         # add new transaction to list of transaction
-        pass
+        """
+            Creates a new transaction to go into the next mined Block
+
+            :param sender: <str> Sender의 주소
+            :param recipient: <str> Recipient의 주소
+            :param amount: <int> Amount
+            :return: <int> 이 거래를 포함할 블록의 index 값
+            """
+
+        self.current_transactions.append({
+            'sender': sender,
+            'recipient': recipient,
+            'amount': amount,
+        })
+
+        return self.last_block['index'] + 1
 
     @staticmethod
     def hash(block):
