@@ -11,10 +11,8 @@ class Blockchain(object):
         self.new_block(previous_hash=1, proof=100)
 
     def new_block(self, proof, previous_hash=None):
-        # create new block, add it to chain
         """
-          블록체인에 새로운 블록 만들기
-
+          create new block, add it to chain
           :param proof: <int> proof 는 Proof of Work 알고리즘에 의해서 제공된다.
           :param previous_hash: (Optional) <str> 이전 블록의 해쉬값
           :return : <dict> 새로운 블록
@@ -54,12 +52,13 @@ class Blockchain(object):
 
         return self.last_block['index'] + 1
 
+    @property
+    def last_block(self):
+        return self.chain[-1]
+
     @staticmethod
     def hash(block):
         # hashes a block
-        pass
+        block_string = json.dumps(block, sort_keys=True).encode()
+        return hashlib.sha256(block_string).hexdigest()
 
-    @property
-    def last_block(self):
-        # return last block in chain
-        pass
