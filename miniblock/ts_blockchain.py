@@ -153,7 +153,7 @@ def mine():
     proof = blockchain.proof_of_work(last_proof)
 
     # proof 값을 찾으면(채굴에 성공하면) 보상을 준다.
-    # sender의 주소를 0으로 한다. (원래 거래는 송신자, 수신자가 있어야 하는데 챌굴에 대한 보상으로 얻은 코인은 sender 가 없다.)
+    # sender의 주소를 0으로 한다. (원래 거래는 송신자, 수신자가 있어야 하는데 채굴에 대한 보상으로 얻은 코인은 sender 가 없다.)
     blockchain.new_transaction(
         sender="0",
         recipient=node_identifier,
