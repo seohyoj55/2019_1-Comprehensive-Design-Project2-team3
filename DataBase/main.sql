@@ -39,7 +39,8 @@ PRIMARY KEY(NID)
 #Examination Table
 CREATE TABLE Examination(                         /*문진 목록*/
 EXID int(5), NOT NULL,                            /*문진 번호*/
-PID int(5), NOT NULL,                             /*환자 번호*/
+PID int(5), NOT NULL,                             /*환자 아이디*/
+DID int(5) NOT NULL,                              /*의사 아이디*/
 Edate DATE NOT NULL,                              /*일시*/
 writer char(4),                                   /*작성자*/
 imp varchar(20),                                  /*진단명*/
@@ -55,7 +56,8 @@ family boolean,                                   /*가족병력 유무*/
 LOC enum('AL','DR','ST','SE','CO'),               /*의식상태-명료(AL), 기면(DR), 혼미(ST), 반혼수(SE), 혼수(CO)*/
 PH varchar(50),                                   /*과거력*/
 PRIMARY KEY(EXID),
-FOREIGN KEY(PID) REFERENCES Patient(PID)
+FOREIGN KEY(PID) REFERENCES Patient(PID),
+FOREIGN KEY(DID) REFERENCES Patient(DID)
 );
 
 #Doctor's Input Table
