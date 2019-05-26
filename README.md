@@ -4,6 +4,17 @@ Due to the problems faced by the medical industry with the expansion of advanced
 In order to do this, it is necessary to acquire BlockChain-based technology and application technology which are getting popular.<br><br>
 
 ### 1. User Interface
+Login
+Input patient 
+환자상태입력화면(간호사,의사)
+간호사 : 바이탈체크 + 추가항목() 입력
+의사 :   1) 문진 (입원할 때마다) + 작은칸(소견)
+2) 일반 진료(입원 중) = 소견+ 처방 (칸은 똑같이)
+조회화면 -  바이탈만 그래프, 모든입력은 그래프 밑에 뱉어, 의사소견, 처방
+=> 기간 설정 가능
+의약품정보화면
+간호사, 의사 등록 화면
+
 ### 2. Hyper Ledger
 
 
