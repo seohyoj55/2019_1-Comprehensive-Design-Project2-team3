@@ -21,3 +21,14 @@ qualification int(5) NOT NULL,
 department varchar(30),
 PRIMARY KEY(DID)
 );
+
+CREATE TABLE Nurse( /*간호사 초기 정보*/
+NID int(5) NOT NULL,
+name char(4) NOT NULL,
+telecom int(11),
+address varchar(50),
+gender enum('F','M') NOT NULL,
+birthDate int(8) NOT NULL,
+qualification int(5) NOT NULL,
+PRIMARY KEY(NID)
+);
