@@ -1,3 +1,4 @@
+#Patient Table
 CREATE TABLE Patient( /*환자 초기 정보*/
 PID int(5) NOT NULL, /*환자 아이디*/
 name char(4) NOT NULL, /*환자 이름*/
@@ -12,14 +13,14 @@ PRIMARY KEY(PID)
 
 #Doctor Table
 CREATE TABLE Doctor( /*의사 초기 정보*/
-DID int(5) NOT NULL,
-name char(4) NOT NULL,
-telecom int(11),
-address varchar(50);
-gender enum('F','M') NOT NULL,
-birthDate int(8) NOT NULL,
-qualification int(5) NOT NULL,
-department varchar(30),
+DID int(5) NOT NULL, /*의사 아이디*/
+name char(4) NOT NULL, /*의사 이름*/
+telecom int(11), /*의사 전화번호*/
+address varchar(50); /*의사 주소*/
+gender enum('F','M') NOT NULL, /*의사 성별*/
+birthDate int(8) NOT NULL, /*의사 생년월일*/
+qualification int(5) NOT NULL, /*의사 면허번호*/
+department varchar(30), /*의사 진료과목*/
 PRIMARY KEY(DID)
 );
 
