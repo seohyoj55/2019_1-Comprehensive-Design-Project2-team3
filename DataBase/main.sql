@@ -66,5 +66,17 @@ FOREIGN KEY(DID) REFERENCES Patient(DID)
 );
 
 #Doctor's Input Table
+CREATE TABLE DocInput (
+    DINo INT(5) NOT NULL,
+    PID CHAR(5) NOT NULL,
+    DID CHAR(5) NOT NULL,
+    opinion VARCHAR(500),
+    prescription VARCHAR(500),
+    PRIMARY KEY (DINo),
+    FOREIGN KEY (PID)
+        REFERENCES Patient (PID),
+    FOREIGN KEY (DID)
+        REFERENCES Doctor (DID)
+);
 
 #Nurse's Input Table
