@@ -80,3 +80,21 @@ CREATE TABLE DocInput (
 );
 
 #Nurse's Input Table
+CREATE TABLE NurInput (
+   NINo INT(5) NOT NULL,
+    PID CHAR(5) NOT NULL,
+    NID CHAR(5) NOT NULL,
+    BP INT,
+    RR INT,
+    BT DECIMAL(3 , 1 ),
+    PR INT,
+    BS INT,
+    IT INT,
+    OP INT,
+    SpO2 DECIMAL(3 , 1 ),
+    PRIMARY KEY (NINo),
+    FOREIGN KEY (PID)
+        REFERENCES Patient (PID),
+    FOREIGN KEY (NID)
+        REFERENCES Nurse (NID)
+);
