@@ -17,7 +17,11 @@ Input patient
 
 ### 2. Hyper Ledger
 
-
+>### html template Authors
+> [Colorlib](https://colorlib.com)
+> ### License
+> Sufee is licensed under The MIT License (MIT). Which means that you can use, copy, modify, merge, publish, distribute, sublicense, 
+> and/or sell copies of the final products. But you always need to state that Colorlib is the original author of this template.
 
 ## Summary
 To summarize our project, we are building a blockchain-based patient care platform.
