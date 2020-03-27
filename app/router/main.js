@@ -9,11 +9,11 @@ module.exports = function(app,fs)
 
   //=============================================================================mysql연결
   var mySqlClient = mysql.createConnection({
-    host : "ss.a100.kr",
+    host : "host addr",
     port : 3306,
-    user : 'jung',
-    password : 'junggogo',
-    database : 'jungeun',
+    user : 'username',
+    password : 'password',
+    database : 'databasename',
     multipleStatements: true
   });
   ////===============================================================================
